@@ -9,7 +9,7 @@ export const CglContext = createContext(null);
 // Provider component
 const CglContextProvider = ({ children }) => {
   const navigate = useNavigate();
-  const url = "https://ssc-darpan.onrender.com/";
+  const url = "https://ssc-darpan.onrender.com";
 
   // ===== States =====
   const [token, setToken] = useState(localStorage.getItem("token") || "");
