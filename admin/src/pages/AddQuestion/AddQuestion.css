@@ -1,0 +1,227 @@
+/* src/components/AddQuestion.css */
+
+.add-question-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Ensure it takes full height, accounting for header/footer */
+  min-height: calc(100vh - 120px); /* Adjust based on your header/footer height */
+  background-color: #f0f2f5; /* Slightly darker light grey background for contrast */
+  padding: 30px; /* Increased overall padding */
+}
+
+.add-question-card {
+  background-color: #ffffff;
+  border-radius: 15px; /* Slightly more rounded corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+  padding: 40px; /* Significantly increased padding inside the card */
+  width: 100%;
+  max-width: 650px; /* Increased max-width for a larger form on wider screens */
+  text-align: center;
+  border: 1px solid #dcdcdc; /* Subtle border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.add-question-card:hover {
+  transform: translateY(-7px); /* More pronounced lift effect on hover */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.add-question-title {
+  font-size: 2.8em; /* Much larger title */
+  font-weight: 700;
+  color: #2c3e50; /* A deeper, more prominent blue/dark shade */
+  margin-bottom: 35px; /* More space below title */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Increased letter spacing */
+}
+
+.add-question-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px; /* Increased spacing between form elements */
+}
+
+.add-question-input,
+.add-question-textarea {
+  width: calc(100% - 30px); /* Full width minus new padding (2*15px) */
+  padding: 15px; /* Increased padding */
+  border: 1px solid #a0a0a0; /* Slightly darker border */
+  border-radius: 10px; /* More rounded corners */
+  font-size: 1.15rem; /* Larger font size */
+  color: #333333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.add-question-input::placeholder,
+.add-question-textarea::placeholder {
+  color: #777; /* Slightly darker placeholder text */
+}
+
+.add-question-input:focus,
+.add-question-textarea:focus {
+  border-color: #3498db; /* A vibrant blue on focus */
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.3); /* More pronounced glow */
+  outline: none; /* Remove default outline */
+}
+
+.add-question-textarea {
+  min-height: 100px; /* Increased minimum height for textarea */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+/* Custom file input styling */
+.add-question-file-input {
+  display: none; /* Hide default file input */
+}
+
+.add-question-file-label {
+  background-color: #e8f0fe; /* Lighter blue background for label */
+  color: #34495e; /* Darker text for label */
+  padding: 15px 20px; /* Increased padding */
+  border-radius: 10px;
+  cursor: pointer;
+  display: block; /* Takes full width */
+  text-align: left;
+  border: 2px dashed #b3cde0; /* Thicker dashed border */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  font-size: 1.1rem; /* Larger font size */
+  font-weight: 500;
+}
+
+.add-question-file-label:hover {
+  background-color: #dbe9fc;
+  border-color: #92b8d9;
+}
+
+.add-question-button {
+  background-color: #2ecc71; /* A more vibrant green */
+  color: white;
+  padding: 16px 30px; /* More generous padding */
+  border: none;
+  border-radius: 10px; /* More rounded corners */
+  cursor: pointer;
+  font-size: 1.25rem; /* Much larger font */
+  font-weight: 700; /* Bolder text */
+  letter-spacing: 0.8px; /* Increased letter spacing */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  width: 100%; /* Full width button */
+  margin-top: 15px; /* More space above button */
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3); /* Subtle button shadow */
+}
+
+.add-question-button:hover:not(:disabled) {
+  background-color: #27ae60; /* Darker green on hover */
+  transform: translateY(-3px); /* More pronounced lift on hover */
+  box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+}
+
+.add-question-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7; /* Slightly more opaque when disabled */
+}
+
+.add-question-message {
+  margin-top: 25px; /* More space above message */
+  padding: 12px 20px;
+  border-radius: 10px; /* More rounded message box */
+  font-size: 1.05rem; /* Larger font for messages */
+  font-weight: 600; /* Bolder message text */
+  text-align: center;
+}
+
+.add-question-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.add-question-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsive Adjustments for "Big" Look on Smaller Screens */
+@media (max-width: 768px) {
+  .add-question-page-container {
+    padding: 20px; /* Adjust padding for tablets */
+  }
+  .add-question-card {
+    padding: 30px; /* Slightly less padding on smaller screens */
+  }
+
+  .add-question-title {
+    font-size: 2.2em; /* Keep it big, but scale down slightly */
+    margin-bottom: 25px;
+  }
+
+  .add-question-form {
+    gap: 18px; /* Adjust gap */
+  }
+
+  .add-question-input,
+  .add-question-textarea,
+  .add-question-file-label {
+    padding: 12px; /* Slightly less padding */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .add-question-textarea {
+    min-height: 90px;
+  }
+
+  .add-question-button {
+    padding: 14px 25px;
+    font-size: 1.1rem;
+  }
+
+  .add-question-message {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-question-page-container {
+    padding: 15px; /* Reduced padding for very small screens */
+  }
+  .add-question-card {
+    padding: 25px; /* Further reduced card padding */
+    border-radius: 10px; /* Slightly less rounded */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+  }
+
+  .add-question-title {
+    font-size: 1.8em; /* Fit on very small screens */
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  .add-question-form {
+    gap: 15px;
+  }
+
+  .add-question-input,
+  .add-question-textarea,
+  .add-question-file-label {
+    padding: 10px; /* Minimum comfortable padding */
+    font-size: 0.95rem; /* Standard mobile font size */
+  }
+
+  .add-question-textarea {
+    min-height: 70px; /* Shorter textarea on very small screens */
+  }
+
+  .add-question-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .add-question-message {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}
