@@ -9,7 +9,8 @@ const Sidebar = () => {
       <div className="admin-sidebar-options">
         <NavLink to="/addquestion" className="admin-sidebar-option">
           <img src={assets.add_icon} alt="Add Question Icon" />
-          <p>Add Question</p> {/* Capitalized for consistency with title style */}
+          <p>Add Question</p>{" "}
+          {/* Capitalized for consistency with title style */}
         </NavLink>
         <NavLink to="/listquestion" className="admin-sidebar-option">
           <img src={assets.list_icon} alt="List Question Icon" />
