@@ -128,10 +128,9 @@ const PreviousYear = () => {
                   onClick={() => handleExamClick(exam)}
                   className={`
                     px-6 py-3 rounded-full text-lg font-medium shadow-md transition-all duration-300 ease-in-out
-                    ${
-                      selectedExam === exam
-                        ? "bg-blue-700 text-white ring-2 ring-blue-500 transform scale-105"
-                        : "bg-gray-100 text-gray-800 hover:bg-blue-50 hover:text-blue-700 border border-gray-200"
+                    ${selectedExam === exam
+                      ? "bg-blue-700 text-white ring-2 ring-blue-500 transform scale-105"
+                      : "bg-gray-100 text-gray-800 hover:bg-blue-50 hover:text-blue-700 border border-gray-200"
                     }
                   `}
                 >
@@ -163,10 +162,9 @@ const PreviousYear = () => {
                     onClick={() => handleYearClick(year)}
                     className={`
                       px-5 py-2 rounded-full text-base font-medium shadow-sm transition-all duration-300 ease-in-out
-                      ${
-                        selectedYear === year
-                          ? "bg-blue-700 text-white ring-2 ring-blue-500 transform scale-105"
-                          : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-700 border border-gray-200"
+                      ${selectedYear === year
+                        ? "bg-blue-700 text-white ring-2 ring-blue-500 transform scale-105"
+                        : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-700 border border-gray-200"
                       }
                     `}
                   >
@@ -192,10 +190,9 @@ const PreviousYear = () => {
                   onClick={() => handleCategoryClick(category)}
                   className={`
                     px-5 py-2 rounded-full text-base font-medium shadow-sm transition-all duration-300 ease-in-out
-                    ${
-                      selectedCategory === category
-                        ? "bg-blue-700 text-white ring-2 ring-blue-500 transform scale-105"
-                        : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-700 border border-gray-200"
+                    ${selectedCategory === category
+                      ? "bg-blue-700 text-white ring-2 ring-blue-500 transform scale-105"
+                      : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-700 border border-gray-200"
                     }
                   `}
                 >
@@ -234,6 +231,7 @@ const PreviousYear = () => {
                     </p>
                     <a
                       href={file.file}
+                      download={file.originalFilename}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-200 text-sm shadow"

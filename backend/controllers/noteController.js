@@ -15,6 +15,7 @@ const uploadNote = async (req, res) => {
       subject: req.body.subject,
       chapter: req.body.chapter,
       file: req.file.path,
+      originalFilename: req.file.originalname,
       description: req.body.description,
       uploaded_at: new Date(),
     });

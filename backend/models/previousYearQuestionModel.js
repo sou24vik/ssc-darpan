@@ -21,6 +21,10 @@ const previousYearQuestionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  originalFilename: {
+    type: String,
+    required: true,
+  },
   description: {
     type: String,
   },

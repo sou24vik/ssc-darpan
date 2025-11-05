@@ -9,13 +9,16 @@ const noteSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  chapter :{
+  chapter: {
     type: String,
     required: true
-
   },
   file: {
     // URL or file path
+    type: String,
+    required: true,
+  },
+  originalFilename: {
     type: String,
     required: true,
   },

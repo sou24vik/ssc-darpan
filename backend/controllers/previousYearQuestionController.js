@@ -19,6 +19,7 @@ const uploadQuestion = async (req, res) => {
       category,
       description,
       file: req.file.path,
+      originalFilename: req.file.originalname
     });
 
     await newQuestion.save();

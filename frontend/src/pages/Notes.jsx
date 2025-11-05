@@ -118,10 +118,9 @@ const Notes = () => {
                   onClick={() => handleSubjectClick(subject)}
                   className={`
                     px-6 py-3 rounded-full text-lg font-medium shadow-md transition-all duration-300 ease-in-out
-                    ${
-                      selectedSubject === subject
-                        ? "bg-blue-700 text-white ring-2 ring-blue-500 transform scale-105"
-                        : "bg-gray-100 text-gray-800 hover:bg-blue-50 hover:text-blue-700 border border-gray-200"
+                    ${selectedSubject === subject
+                      ? "bg-blue-700 text-white ring-2 ring-blue-500 transform scale-105"
+                      : "bg-gray-100 text-gray-800 hover:bg-blue-50 hover:text-blue-700 border border-gray-200"
                     }
                   `}
                 >
@@ -154,10 +153,9 @@ const Notes = () => {
                     onClick={() => handleChapterClick(chapter)}
                     className={`
                       px-5 py-2 rounded-full text-base font-medium shadow-sm transition-all duration-300 ease-in-out
-                      ${
-                        selectedChapter === chapter
-                          ? "bg-green-700 text-white ring-2 ring-green-500 transform scale-105"
-                          : "bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-700 border border-gray-200"
+                      ${selectedChapter === chapter
+                        ? "bg-green-700 text-white ring-2 ring-green-500 transform scale-105"
+                        : "bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-700 border border-gray-200"
                       }
                     `}
                   >
@@ -198,6 +196,7 @@ const Notes = () => {
                     </p>
                     <a
                       href={note.file}
+                      download={note.originalFilename}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-200 text-sm shadow"
