@@ -18,8 +18,8 @@ const uploadQuestion = async (req, res) => {
       year,
       category,
       description,
-      file: req.file.path,
-      originalFilename: req.file.originalname
+      file: `${req.file.path}.pdf`,
+      originalFilename: req.file.originalname,
     });
 
     await newQuestion.save();
